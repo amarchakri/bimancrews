@@ -1,0 +1,20 @@
+
+    public function up(): void
+    {
+        Schema::create('phones', function (Blueprint $table) {
+            $table->id();
+            $table->integer('employee_id');
+            $table->string('type');
+            $table->integer('number');
+            $table->string('availability');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('phones');
+    }

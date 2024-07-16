@@ -1,0 +1,24 @@
+
+    public function up(): void
+    {
+        Schema::create('families', function (Blueprint $table) {
+            $table->id();
+            $table->integer('employee_id')->nullable();
+            $table->string('first_name')->nullable();
+            $table->string('middle_name')->nullable();
+            $table->string('last_name')->nullable();
+            $table->string('gender')->nullable();
+            $table->string('relation')->nullable();
+            $table->string('photo')->nullable();
+            $table->date('dob')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('families');
+    }

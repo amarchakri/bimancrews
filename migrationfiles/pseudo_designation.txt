@@ -1,0 +1,17 @@
+
+    public function up(): void
+    {
+        Schema::create('pseudo_designation', function (Blueprint $table) {
+            $table->id();
+            $table->string('dutyBoundDesignation')->nullable(); //special duty on work
+            $table->timestamps();   
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('pseudo_designation');
+    }

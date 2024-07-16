@@ -1,0 +1,20 @@
+
+    public function up(): void
+    {
+        Schema::create('passage_applicants', function (Blueprint $table) {
+            $table->id();
+            $table->integer('user_id');
+            $table->integer('employee_id');
+            $table->integer('family_id');
+            $table->integer('passage_id');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('passage_applicants');
+    }
